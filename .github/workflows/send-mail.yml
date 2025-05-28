@@ -1,0 +1,25 @@
+name: Send Hello Email
+
+on:
+  workflow_dispatch:
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Send Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.GMAIL_USER }}
+          password: ${{ secrets.GMAIL_PASS }}
+          subject: "Hello from GitHub Actions!"
+          to: ${{ secrets.GMAIL_USER }}
+          from: ${{ secrets.GMAIL_USER }}
+          content_type: text/plain
+          body: |
+            Hi Sneha 👋,
+
+            This is a test email sent from your GitHub Actions workflow!
