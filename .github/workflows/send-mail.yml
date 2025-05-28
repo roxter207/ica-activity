@@ -20,6 +20,4 @@ jobs:
           from: ${{ secrets.GMAIL_USER }}
           content_type: text/plain
           body: |
-            Hi Sneha 👋,
-
-            This is a test email sent from your GitHub Actions workflow!
+            wassupppp
