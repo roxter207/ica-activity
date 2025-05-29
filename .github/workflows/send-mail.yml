@@ -19,8 +19,9 @@ jobs:
           username: ${{ secrets.GMAIL_USER }}
           password: ${{ secrets.GMAIL_PASS }}
           subject: GitHub Actions Email Test For Assignment
+          to: ${{ secrets.GMAIL_USER }}
+          from: ${{ secrets.GMAIL_USER }}
           content_type: text/plain
           body: |
                      Hello Team,
-
-                        The CI/CD workflow for the ${{env.APP_NAME}} application has successfully executed.
+                     The CI/CD workflow for the ${{env.APP_NAME}} application has successfully executed.
