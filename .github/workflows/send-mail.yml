@@ -1,23 +1,26 @@
-name: Send Hello Email
+name: Send Mail on Push
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [main]  # Triggers the workflow when pushing to main
 
 jobs:
   send_email:
     runs-on: ubuntu-latest
- 
+    env: 
+        APP_NAME: Marketplace Email Integration
+
     steps:
-      - name: Send Email
+      - name: Send email using Gmail
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{ secrets.GMAIL_USER }}
           password: ${{ secrets.GMAIL_PASS }}
-          subject: "Hello from GitHub Actions!"
-          to: ${{ secrets.GMAIL_USER }}
-          from: ${{ secrets.GMAIL_USER }}
+          subject: GitHub Actions Email Test For Assignment
           content_type: text/plain
           body: |
-            wassupppp
+                     Hello Team,
+
+                        The CI/CD workflow for the ${{env.APP_NAME}} application has successfully executed.
