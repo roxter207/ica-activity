@@ -3,7 +3,7 @@ name: Send Mail on Push
 on:
   push:
     branches: [main]  # Triggers the workflow when pushing to main
-
+   
 jobs:
   send_email:
     runs-on: ubuntu-latest
