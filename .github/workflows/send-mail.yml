@@ -25,3 +25,15 @@ jobs:
           body: |
                      Hello Team,
                      The CI/CD workflow for the ${{env.APP_NAME}} application has successfully executed.
+                     Key Learining:
+                        - Implemented a full GitHub Actions workflow for continuous integration and deployment.
+                        - Utilized various types of variables across workflows, jobs, and steps to manage configurations.
+                        - Integrated actions from the GitHub Marketplace to streamline setup and deployment processes.
+                        - Applied secure secret handling using GitHub Secrets to manage sensitive data.
+
+                        
+                        Repository URL:
+                        https://github.com/roxter207/ica-activity
+
+                        Regards,  
+                        Group Members
